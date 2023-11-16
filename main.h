@@ -8,6 +8,7 @@
 
 int (*selector(char c))(va_list arg);
 int handle_pointeraddress(va_list arg);
+int ROT13(va_list arg);
 int _putchar(char c);
 int _printf(const char *format, ...);
 

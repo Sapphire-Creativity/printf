@@ -1,4 +1,5 @@
 #include "main.h"
+int _printf(const char *format, ...);
 /**
  * _printf - ========
  * @format: =======
@@ -24,6 +25,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == 'p')
+			{
+				count += selector(format[i + 1])(args);
+				i++;
+			}
+			else if (format[i + 1] == 'R')
 			{
 				count += selector(format[i + 1])(args);
 				i++;
