@@ -39,6 +39,11 @@ int _printf(const char *format, ...)
 				count += selector(format[i + 1])(args);
 				i++;
 			}
+			else if (format[i + 1] == 'b')
+			{
+				count += selector(format[i + 1])(args);
+				i++;
+			}	
 			else
 			{
 				count += _putchar(format[i]);
