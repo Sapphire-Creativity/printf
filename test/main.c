@@ -19,5 +19,8 @@ int main(void)
 printf("%d",	_printf("%r"));
 
 _printf("%R\n", "ab");
+
+
+_printf("%r\n", "pascal");
 return (0);
 }

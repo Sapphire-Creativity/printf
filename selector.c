@@ -11,6 +11,8 @@ int (*selector(char c))(va_list arg)
 		return (&handle_pointeraddress);
 	else if (c == 'R')
 		return (&ROT13);
+	else if (c == 'r')
+		return (&reverse);
 
 
 	return (0);
