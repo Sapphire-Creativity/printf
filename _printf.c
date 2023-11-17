@@ -48,10 +48,10 @@ int _printf(const char *format, ...)
 			{
 				count += selector(format[i + 1])(args);
 				i++;
-			}	
+			}
 			else if (format[i + 1] == 's')
 			{
-			       	count += selector(format[i + 1])(args);
+				count += selector(format[i + 1])(args);
 				i++;
 			}
 			else if (format[i + 1] == '%')

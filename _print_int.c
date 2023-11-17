@@ -22,7 +22,7 @@ int _print_integer(int n)
 
 	num = n;
 
-	while(num / 10 > 0)
+	while (num / 10 > 0)
 	{
 		exp *= 10;
 		num /= 10;
@@ -39,7 +39,7 @@ int _print_integer(int n)
 
 	_putchar(n + '0');
 
-	return i + 1;
+	return (i + 1);
 }
 
 /**
@@ -51,7 +51,8 @@ int _print_integer(int n)
 int _print_i(va_list args)
 {
 	int n = va_arg(args, int);
-	return _print_integer(n);
+
+	return (_print_integer(n));
 }
 
 /**
@@ -63,5 +64,6 @@ int _print_i(va_list args)
 int _print_d(va_list args)
 {
 	int n = va_arg(args, int);
-	return _print_integer(n);
+
+	return (_print_integer(n));
 }
