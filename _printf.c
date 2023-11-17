@@ -29,6 +29,10 @@ int _printf(const char *format, ...)
 				count += selector(format[i + 1])(args);
 				i++;
 			}
+			else if (format[i + 1] == '\0')
+			{
+				continue;
+			}
 			else if (format[i + 1] == 'R')
 			{
 				count += selector(format[i + 1])(args);
