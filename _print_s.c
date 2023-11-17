@@ -14,7 +14,6 @@ int _print_s(va_list val)
 	if (s == NULL)
 	{
 		s = "(null)";
-		len = len + 6;
 	}
 
 	while (s[len] != '\0')

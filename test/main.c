@@ -9,18 +9,12 @@
  */
 int main(void)
 {
-	void *addr;
+	int len;
+	int len2;
+len = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+len2 =_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+_printf("%!\n");
+printf("%d = %d", len , len2);
 
-	addr = (void *)0x7ffe637541f0;
-
-	_printf("Address:[%p]\n", addr);
-	printf("Address:[%p]\n", addr);
-
-printf("%d",	_printf("%r"));
-
-_printf("%R\n", "ab");
-
-
-_printf("%r\n", "pascal");
 return (0);
 }

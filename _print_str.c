@@ -8,14 +8,7 @@
 
 int _strlenc(const char *s)
 {
-	int length;
-
-	if (s == NULL)
-	{
-		return (0);
-	}
-
-	length = 0;
+	int length = 0;
 
 	while (*(s + length) != '\0')
 	{
@@ -33,14 +26,7 @@ int _strlenc(const char *s)
 
 int _strlen(const char *s)
 {
-	int length;
-
-	if (s == NULL)
-	{
-		return (0);
-	}
-
-	length = 0;
+	int length = 0;
 
 	while (s[length] != '\0')
 	{
