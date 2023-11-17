@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
+int handles_print(const char *fmt, int *i, va_list list, char buffer[], int flags, int width, int precision, int size);
 int (*selector(char c))(va_list arg);
 int handle_pointeraddress(va_list arg);
 int ROT13(va_list arg);
