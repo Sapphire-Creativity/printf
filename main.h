@@ -5,6 +5,9 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
+#include <stdio.h>
+#include <unistd.h>
 
 int (*selector(char c))(va_list arg);
 int handle_pointeraddress(va_list arg);
@@ -21,4 +24,5 @@ int _print_percent(va_list args);
 int _print_integer(int);
 int _print_i(va_list args);
 int _print_d(va_list args);
+void writeToBuffer(const char *data, size_t length);
 #endif
