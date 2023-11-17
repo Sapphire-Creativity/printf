@@ -43,7 +43,17 @@ int _printf(const char *format, ...)
 			{
 				count += selector(format[i + 1])(args);
 				i++;
+			}
+			else if (format[i + 1] == 'c')
+			{
+				count += selector(format[i + 1])(args);
+				i++;
 			}	
+			else if (format[i + 1] == 's')
+			{
+			       	count += selector(format[i + 1])(args);
+				i++;
+			}
 			else
 			{
 				count += _putchar(format[i]);

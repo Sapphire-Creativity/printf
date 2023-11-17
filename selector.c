@@ -15,7 +15,12 @@ int (*selector(char c))(va_list arg)
 		return (&reverse);
 	else if (c == 'b')
 		return (&_print_binary);
-
+	else if (c == 'c')
+		return (&_print_char);
+	else if (c == 's')
+		return (&_print_s);
+	else if (c == '%')
+		return (&_print_percent);
 	return (0);
 
 }
