@@ -57,6 +57,7 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == '%')
 			{
 				count += selector(format[i + 1])(args);
+				i++;
 			}
 			else if (format[i + 1] == 'd')
 			{
