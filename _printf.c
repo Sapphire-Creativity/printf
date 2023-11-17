@@ -54,6 +54,19 @@ int _printf(const char *format, ...)
 			       	count += selector(format[i + 1])(args);
 				i++;
 			}
+			else if (format[i + 1] == '%')
+			{
+				count += selector(format[i + 1])(args);
+			}
+			else if (format[i + 1] == 'd')
+			{
+				count += selector(format[i + 1])(args);
+				i++;
+			}
+			else if (format[i + 1] == 'i')
+			{
+				count += selector(format[i + 1])(args);
+			}
 			else
 			{
 				count += _putchar(format[i]);
