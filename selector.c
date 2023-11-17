@@ -21,6 +21,11 @@ int (*selector(char c))(va_list arg)
 		return (&_print_s);
 	else if (c == '%')
 		return (&_print_percent);
+	else if (c == 'd')
+	       return (&_print_d);
+	else if (c == 'i')
+		return (&_print_i);
+	
 	return (0);
 
 }
