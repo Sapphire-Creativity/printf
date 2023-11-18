@@ -25,6 +25,8 @@ int (*selector(char c))(va_list arg)
 		return (&_print_i);
 	else if (c == 'd')
 		return (&_print_d);
+	else if (c == 'S')
+		return (&_print_S);
 
 	return (0);
 

@@ -72,14 +72,12 @@ int _printf(const char *format, ...)
 			{
 				count += selector(format[i + 1])(args);
 			}
-			else
+			else if (format[i + 1] == 'S')
 			{
-				count += _putchar(format[i]);
+				count += selector(format[i + 1])(args);
 				i++;
-				count += _putchar(format[i]);
 			}
 		}
-
 		else
 		{
 			count += _putchar(format[i]);
